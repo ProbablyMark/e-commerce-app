@@ -1,0 +1,212 @@
+.navbar {
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    background: rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    font-family: Helvetica;
+    font-weight: 300;
+}
+
+.navbar-item {
+    text-decoration: none;
+    cursor: pointer;
+    vertical-align: middle;
+
+    color: rgb(0, 0, 0);
+    position: relative;
+}
+.navbar-item:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0px;
+    height: 5px;
+    left: 50%;
+    bottom: 0;
+    border-bottom: 2px solid #47b54ec9;
+    transition: 0.2s;
+}
+
+.navbar-item:hover:after {
+    width: 100%;
+    left: 0;
+}
+.navbar-item-active {
+    color: #47b54ec9;
+}
+.navbar-item-active:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    left: 0;
+    bottom: 0;
+    border-bottom: 2px solid #47b54ec9;
+    transition: 0.2s;
+}
+
+img {
+    height: 28px;
+    width: 31px;
+}
+.left-section {
+    cursor: pointer;
+    display: flex;
+    width: 15%;
+    justify-content: space-between;
+}
+
+.right-section {
+    cursor: pointer;
+    display: flex;
+    width: 15%;
+    --x-hight: top;
+    justify-content: flex-end;
+}
+
+.right-section div {
+    margin-right: 20px;
+}
+.right-section div :first-child {
+    margin-right: 3px;
+}
+/********************************************/
+.dropdown {
+    z-index: 2;
+    cursor: default;
+    position: absolute;
+    top: 50px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 1rem;
+    transition: 0.2s;
+    background-color: white;
+}
+.currency-dropdown {
+    transform: translateX(-20%);
+}
+.cart-dropDown {
+    transform: translateX(7%);
+    width: 300px;
+    max-height: 400px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.cart-dropDown div {
+    margin-top: 20px;
+}
+.cart-dropDown .items-section {
+    height: 75%;
+}
+.cart-dropDown .total-section {
+    display: flex;
+    justify-content: space-between;
+}
+.cart-dropDown .checkout-section {
+    display: flex;
+    justify-content: space-between;
+}
+.cart-dropDown .checkout-section button {
+    background-color: rgb(255, 255, 255);
+    width: 40%;
+    cursor: pointer;
+}
+.cart-dropDown .checkout-section button:first-child {
+    background-color: rgb(255, 255, 255);
+    color: black;
+    width: 100%;
+    border: 1px solid black;
+    padding: 1rem;
+}
+.cart-dropDown .checkout-section button {
+    background-color: #47b54ec9;
+    border: 0;
+    color: rgb(255, 255, 255);
+    padding: 1rem;
+}
+.currency-dropdown div {
+    padding: 5px;
+    transition: 0.2s;
+    width: 100%;
+    height: 100%;
+}
+.currency-dropdown div:hover {
+    cursor: pointer;
+    background-color: rgba(155, 152, 152, 0.425);
+}
+/****************************/
+.items-section {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+.items-section::-webkit-scrollbar {
+    width: 7px;
+    opacity: 0;
+}
+
+/* Track */
+.items-section::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+
+/* Handle */
+.items-section::-webkit-scrollbar-thumb {
+    background: rgb(92, 91, 91);
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+.items-section::-webkit-scrollbar-thumb:hover {
+    background: #4d4c4c;
+}
+.cart-item {
+    position: relative;
+    margin-top: 50px;
+    width: 90%;
+    height: 150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.cart-item-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    padding-left: 10%;
+    padding-right: 10%;
+    font-family: "Raleway";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 100%;
+    color: #1d1f22;
+}
+.remove-item {
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    right: 10px;
+    top: 10px;
+    bottom: 0;
+    z-index: 5;
+    opacity: 00.3;
+    position: absolute;
+    border-radius: 50%;
+    color: #b93f3fc9;
+    transition: 0.3s;
+    width: 20px;
+    height: 20px;
+}
+
+.remove-item:hover {
+    opacity: 1;
+}

@@ -1,0 +1,99 @@
+.main-shop-container {
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-top: 70px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 53px;
+    justify-content: flex-start;
+}
+
+.card {
+    position: relative;
+    margin-top: 50px;
+    width: 30%;
+    height: 444px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+figure,
+figure img {
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+}
+
+.card-details {
+    margin-bottom: 20px;
+    margin-top: 10px;
+    padding-left: 10%;
+    padding-right: 10%;
+    font-family: "Raleway";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 160%;
+    color: #1d1f22;
+}
+
+.buy {
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    right: 10px;
+    top: 265px;
+    bottom: 0;
+    opacity: 0;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    border-radius: 50%;
+    background-color: #47b54ec9;
+    color: rgb(255, 255, 255);
+    transition: 0.3s;
+    display: flex;
+    justify-content: center;
+}
+.buy-icon {
+    align-self: center;
+    width: 20px;
+    height: 20px;
+}
+.card:hover .buy {
+    opacity: 1;
+}
+.card:hover .not-inStock {
+    opacity: 1;
+}
+.not-inStock {
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    right: 10px;
+    top: 265px;
+    bottom: 0;
+    opacity: 0;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    border-radius: 50%;
+    background-color: #b93f3fc9;
+    transition: 0.3s;
+}
+.not-inStock p {
+    margin-top: 5px;
+    color: white;
+    text-align: center;
+    font-family: "Raleway";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 10px;
+}

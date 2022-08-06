@@ -1,0 +1,104 @@
+.d-cart-container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    font-family: "Raleway";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 100%;
+    padding: 100px;
+}
+
+.d-items-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.d-cart-item {
+    position: relative;
+    margin-top: 50px;
+    width: 90%;
+    height: 150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.d-cart-item::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    top: -30px;
+
+    border-bottom: 1px solid rgba(61, 61, 61, 0.313);
+}
+.d-cart-item-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    padding-left: 10%;
+    padding-right: 10%;
+
+    color: #1d1f22;
+}
+.d-remove-item {
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    right: 10px;
+    top: 10px;
+    bottom: 0;
+    z-index: 5;
+    opacity: 00.3;
+    position: absolute;
+    border-radius: 50%;
+    color: #b93f3fc9;
+    transition: 0.3s;
+    width: 20px;
+    height: 20px;
+}
+
+.d-remove-item:hover {
+    opacity: 1;
+}
+/************************************************************************/
+
+.d-cart-container .d-items-section {
+    height: 75%;
+}
+.d-cart-container .d-total-section {
+    padding: 50px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.d-cart-container .d-checkout-section button {
+    background-color: rgb(255, 255, 255);
+    width: 40%;
+    cursor: pointer;
+}
+
+.d-cart-container .d-checkout-section button {
+    align-self: flex-end;
+    background-color: #47b54ec9;
+    border: 0;
+    color: rgb(255, 255, 255);
+    padding: 1rem;
+    margin-left: 70%;
+    width: 20%;
+}
+/*************/
+.d-cart-container figure,
+.d-cart-container figure img {
+    height: 100%;
+    width: auto;
+    display: block;
+    overflow: hidden;
+}
